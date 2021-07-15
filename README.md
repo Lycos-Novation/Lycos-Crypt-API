@@ -3,17 +3,17 @@
 
 # Lycos-API-Crypt
 
-### Page pour les requêtes : _https://lycos-novation.fr/preprod/chiffrer/index.php_
-Vous pouvez tester a la main simplement avec _https://lycos-novation.fr/preprod/chiffrer/form.html_
-##    Comment chiffrer mon texte ?
+### Page pour les requêtes : _https://lycos-novation.fr/preprod/chiffrer/index.php_  
+Vous pouvez tester a la main simplement avec _https://lycos-novation.fr/preprod/chiffrer/form.html_  
+##    Comment chiffrer mon texte ?  
 
-Vous devez faire une requête POST en indiquant les champs suivants :
-_action_ : crypt
-_plain_ : {texte à chiffrer}
+Vous devez faire une requête POST en indiquant les champs suivants :  
+_action_ : crypt  
+_plain_ : {texte à chiffrer}  
 
 Le script vous renverra ensuite un JSON avec un hash.
 #### Exemple:
-Requête POST : `{"action":"crypt", "plain":"lycos"}`
+Requête POST : `{"action":"crypt", "plain":"lycos"}`  
 Réponse : `{"hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB+jDBEPECkdUi1C5jFZxD3N4tQkQA=="}`
 
 
@@ -21,16 +21,16 @@ Réponse : `{"hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB
 
 ##  	Comment comparer mon texte avec un hash ?
 
-Vous devez faire une requête POST en indiquant les champs suivants :
-_action_ : compare / crypt
-_hash_ : hash (En cas de compare)
-_plain_ : texte brut (En cas de compare / crypt
+Vous devez faire une requête POST en indiquant les champs suivants :  
+_action_ : compare / crypt  
+_hash_ : hash (En cas de compare)  
+_plain_ : texte brut (En cas de compare / crypt  
 
 Le script vous renverra ensuite un JSON indiquant si les 2 éléments sont liés ou pas.
-#### Exemple:
-Requête POST : `{"action":"compare", "plain":"lycos", "hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB+jDBEPECkdUi1C5jFZxD3N4tQkQA=="}`
+#### Exemple:  
+Requête POST : `{"action":"compare", "plain":"lycos", "hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB+jDBEPECkdUi1C5jFZxD3N4tQkQA=="}`  
 Réponse : `{"corresponds":true}`
 
 ##### Autre exemple : 
-Requête POST : `{"action":"compare", "plain":"Lycos", "hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB+jDBEPECkdUi1C5jFZxD3N4tQkQA=="}`
+Requête POST : `{"action":"compare", "plain":"Lycos", "hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB+jDBEPECkdUi1C5jFZxD3N4tQkQA=="}`  
 Réponse : `{"corresponds":false}`
