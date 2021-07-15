@@ -22,9 +22,9 @@ Réponse : `{"hash":"lmOGm1LYXh4XTlDsCrzIDClnS0+rBNZlR8XOsIq1pg6sJEKXXieT\/aCSoB
 ##  	Comment comparer mon texte avec un hash ?
 
 Vous devez faire une requête POST en indiquant les champs suivants :
-_action_ : compare
-_hash_ : hash
-_plain_ : texte brut
+_action_ : compare / crypt
+_hash_ : hash (En cas de compare)
+_plain_ : texte brut (En cas de compare / crypt
 
 Le script vous renverra ensuite un JSON indiquant si les 2 éléments sont liés ou pas.
 #### Exemple:
