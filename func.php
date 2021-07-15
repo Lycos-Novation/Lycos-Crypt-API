@@ -45,11 +45,7 @@ function compare($hash, $texte){ //Fonction déterminant si le hash déchiffré 
     $hmac = substr($c, $ivlen, $sha2len=32);
     $ciphertext_raw = substr($c, $ivlen+$sha2len);
     $dechiffre = openssl_decrypt($ciphertext_raw, $cipher, $clechiffrement, $options=OPENSSL_RAW_DATA, $iv);
-    if($texte_plein == $dechiffre){
-        return true;
-    }
-    else{
-        return false;
-    }
+    $texte_plein == $dechiffre?$return=true:$return=false;
+    return $return;
 };
 ?>
